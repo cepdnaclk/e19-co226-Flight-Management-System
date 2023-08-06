@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.create-flight-card-container {
+    font-family: 'Lucida Sans';
+    display: flex;
+    justify-content: space-around;
+}
+
+.create-flight-card {
+    background-color: rgb(210, 245, 255);
+    width: 600px;
+    margin-top: 100px;
+    padding: 30px 50px;
+    display: grid;
+    border-radius: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 25px;
+}
+
+.departure-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.departure-label {
+    font-size: 16px;
+    width: 150px;
+}
+
+.departure-textbox {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-color: rgb(0, 61, 146);
+}
+
+.arrival-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.arrival-label {
+    font-size: 16px;
+    width: 150px;
+}
+
+.arrival-textbox {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-color: rgb(0, 61, 146);
+}
+
+.from-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.from-label {
+    font-size: 16px;
+    width: 150px;
+}
+
+.from-textbox {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-color: rgb(0, 61, 146);
+    outline: none;
+}
+
+.to-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.to-label {
+    font-size: 16px;
+    width: 150px;
+}
+
+.to-textbox {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-color: rgb(0, 61, 146);
+    outline: none;
+}
+
+.duration-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.duration-label {
+    font-size: 16px;
+    width: 150px;
+}
+
+.duration-textbox {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-color: rgb(0, 61, 146);
+    outline: none;
+}
+
+.price-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.price-label {
+    font-size: 16px;
+    width: 150px;
+}
+
+.price-textbox {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-color: rgb(0, 61, 146);
+    outline: none;
+}
+
+.add-button-container {
+    display: block;
+    margin-top: 25px;
+}
+
+.add-button {
+    width: 100%;
+    border-style: solid;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(0, 61, 146);
+    color: white;
+    font-family: 'Lucida Sans';
+    font-size: 15px;
+}
