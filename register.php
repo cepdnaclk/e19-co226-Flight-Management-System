@@ -104,6 +104,19 @@
         UNIQUE (ID)
     );
 
+    CREATE TABLE flight (
+        flight_id INT AUTO_INCREMENT PRIMARY KEY,
+        departure_time datetime NOT NULL,
+        arrival_time datetime NOT NULL,
+        depature varchar(50) NOT NULL,
+        destination varchar(50) NOT NULL,
+        duration int(20) NOT NULL,
+        price int(10) NOT NULL
+    );
+
+
+    "SELECT * FROM flight WHERE depature = '$departure' AND destination = '$destination'";
+
 
     */
 
