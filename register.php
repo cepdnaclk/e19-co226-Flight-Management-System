@@ -1,5 +1,6 @@
 <?php
     include("database.php");
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +75,10 @@
 
             try{
                 mysqli_query($conn, $sql);
-                echo '<script>alert("Login successfull!");</script>';
+                $_SESSION['username'] = $email;
+                $_SESSION['password'] = $password;
+                header("Location: dashboard.php");
+                exit();
             }
             catch(mysqli_sql_exception $e){
                 $error =  $e->getMessage();
@@ -100,15 +104,6 @@
         UNIQUE (ID)
     );
 
-    CREATE TABLE flight (
-        flight_id INT AUTO_INCREMENT PRIMARY KEY
-        departure_time datetime NOT NULL,
-        arrival_time datetime NOT NULL,
-        departure varchar(50) NOT NULL,
-        destination varchar(50) NOT NULL,
-        duration int(20) NOT NULL,
-        price int(10) NOT NULL
-    );
 
     */
 

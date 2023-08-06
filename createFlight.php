@@ -53,3 +53,48 @@
     var element = document.getElementById("create-flight-button");
     element.style.fontWeight = "bold";
 </script>
+
+<?php
+    if(isset($_POST["submit"])){
+        $departure = filter_input(INPUT_POST, "departure-time", FILTER_SANITIZE_SPECIAL_CHARS);
+        $arrival = filter_input(INPUT_POST, "arrival-time", FILTER_SANITIZE_SPECIAL_CHARS);
+        $from = filter_input(INPUT_POST, "from", FILTER_SANITIZE_SPECIAL_CHARS);
+        $to = filter_input(INPUT_POST, "to", FILTER_SANITIZE_SPECIAL_CHARS);
+        $duration = filter_input(INPUT_POST, "duration", FILTER_SANITIZE_SPECIAL_CHARS);
+        $price = filter_input(INPUT_POST, "price", FILTER_SANITIZE_SPECIAL_CHARS);
+        
+        if(empty($departure)){
+            echo '<script>alert("enter departure time");</script>';
+        }
+        elseif(empty($arrival)){
+            echo '<script>alert("enter arrival time");</script>';
+        }
+        elseif(empty($from)){
+            echo '<script>alert("enter from");</script>';
+        }
+        elseif(empty($to)){
+            echo '<script>alert("enter destination");</script>';
+        }
+        elseif(empty($duration)){
+            echo '<script>alert("enter duration");</script>';
+        }
+        elseif(empty($price)){
+            echo '<script>alert("enter price");</script>';
+        }
+        else{
+            $sql = "INSERT INTO flight (departure_time, arrival_time, depature, destination, duration, price) 
+                    VALUE ('$departure', '$arrival', '$from', '$to', '$duration', '$price')";
+
+            try{
+                mysqli_query($conn, $sql);
+                echo '<script>alert("Flight added successfull");</script>';
+            }
+            catch(mysqli_sql_exception $e){
+                $error =  $e->getMessage();
+                echo '<script>alert("' . $error . '");</script>';
+            }
+            
+        }
+    }
+
+?>
