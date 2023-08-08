@@ -117,11 +117,14 @@
     
     CREATE TABLE ticket (
         ticket_id INT AUTO_INCREMENT PRIMARY KEY,
-        user_id varchar(50) NOT NULL,
-        flight_id int NOT NULL,
-        FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
-        FOREIGN KEY (flight_id) REFERENCES users(flight_id) ON DELETE CASCADE ON UPDATE CASCADE
+        uid int,
+        fid int,
+        FOREIGN KEY (uid) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY (fid) REFERENCES flight(flight_id) ON DELETE CASCADE ON UPDATE CASCADE
     );
+
+    INSERT INTO ticket (uid,fid)
+    VALUES ($uid,$fid);
 
 
 
