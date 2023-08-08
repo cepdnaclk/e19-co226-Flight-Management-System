@@ -8,6 +8,10 @@ body {
 }
 
 .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 70px;
     background-color: rgb(210, 237, 252);
     display: flex;
@@ -26,4 +30,12 @@ body {
     display: flex;
     gap: 30px;
     
+}
+
+.dashboard-button:hover {
+    cursor: pointer;
+}
+
+.ticket-button:hover{
+    cursor: pointer;
 }

@@ -92,6 +92,7 @@
 
     /*
     CREATE TABLE users (
+        user_id INT AUTO_INCREMENT PRIMARY KEY,
         first_name varchar(50) NOT NULL,
         last_name varchar(50) NOT NULL,
         birth_day date NOT NULL,
@@ -100,8 +101,8 @@
         country varchar(50) NOT NULL,
         password varchar(255) NOT NULL,
         role varchar(50) NOT NULL,
-        PRIMARY KEY (email),
-        UNIQUE (ID)
+        UNIQUE (id),
+        UNIQUE(email)
     );
 
     CREATE TABLE flight (
@@ -113,6 +114,15 @@
         duration int(20) NOT NULL,
         price int(10) NOT NULL
     );
+    
+    CREATE TABLE ticket (
+        ticket_id INT AUTO_INCREMENT PRIMARY KEY,
+        user_id varchar(50) NOT NULL,
+        flight_id int NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE ON UPDATE CASCADE,
+        FOREIGN KEY (flight_id) REFERENCES users(flight_id) ON DELETE CASCADE ON UPDATE CASCADE
+    );
+
 
 
     "SELECT * FROM flight WHERE depature = '$departure' AND destination = '$destination'";
