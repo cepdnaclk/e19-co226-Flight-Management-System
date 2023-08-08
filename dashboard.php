@@ -27,7 +27,7 @@
                 $email = $row['email'];
                 $country = $row['country'];
                 $role = $row['role'];
-                $uid = "";
+                $uid = $row['user_id'];
 
                 echo <<<EOL
                         <div class="profile-container">
