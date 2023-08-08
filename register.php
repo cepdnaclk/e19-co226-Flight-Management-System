@@ -14,7 +14,7 @@
 <body>
     <form action="register.php" method="post">
         <div class="register-card">
-            <p class="header-name">FlightNav Pro</p>
+        <img src="assests/images/logo.png" class="img-radius" alt="LOGO">
             <div class="name-container">
                 <input class="first-textbox" type="text" name="fname" placeholder="First Name">
                 <input class="last-textbox" type="text" name="lname" placeholder="Last Name">

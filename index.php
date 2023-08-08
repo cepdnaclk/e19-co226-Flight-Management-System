@@ -12,10 +12,16 @@
     <link rel="stylesheet" href="assests/style/login.css">
 </head>
 <body>
-    
+    <div class="preload">
+        <img class="airplane" src="assests/images/airplane.png" alt="airplane">
+        <h3>Landing on the Website...</h3>
+        <img class="cloud1" src="assests/images/cloud.png" alt="cloud1">
+        <img class="cloud2" src="assests/images/cloud.png" alt="cloud2">
+        <img class="cloud3" src="assests/images/cloud.png" alt="cloud3">
+    </div>
     <form action="index.php" method="post">
         <div class="register-card">
-            <img src="assests/images/logo.png" class="img-radius" alt="User-Profile-Image">
+            <img src="assests/images/logo.png" class="img-radius" alt="LOGO">
             <div class="username-container">
                 <p class="username-label">username</p>
                 <p id="username-taken-label"></p>
@@ -27,12 +33,11 @@
                 <p id="password-taken-label"></p>
                 <input class="password-textbox" type="password" name="password"><br>
             </div>
-            <div class="register-link">not a member ? <a class="register-label" href="register.php">Register</a> </div>
+            <div class="register-link">Not a member ? <a class="register-label" href="register.php">Register</a> </div>
             <input class="register-button" type="submit" name="submit" value="login">
         </div>
     </form>
-    
-    
+    <script src="./app.js"></script>
 </body>
 </html>
 

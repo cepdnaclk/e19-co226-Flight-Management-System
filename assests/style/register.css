@@ -1,11 +1,22 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-image: url("../images/bg.jpg");
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; 
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.img-radius{
+    width: 60%;
+    padding: 20px;
 }
 
 .register-card {
@@ -13,7 +24,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 500px;
+    height: 580px;
     width: 400px;
     border:none;
     border-radius: 20px;
@@ -22,7 +33,9 @@ body {
     align-items: center;
     padding: 30px 50px;
     border-width: 1px;
-    background-color: aliceblue;
+    background-color: rgba(255, 244, 210, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .header-name {
@@ -45,7 +58,7 @@ body {
     margin-top: 15px;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #203e75;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -64,7 +77,7 @@ body {
     width: 70%;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #203e75;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -77,7 +90,7 @@ body {
     width: 70%;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #203e75;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -91,7 +104,7 @@ body {
 }
 
 .bday-label {
-    color: rgb(59, 3, 138);
+    color: #203e75;
     margin-top: 15px;
     padding-left: 20px;
     flex: 2fr;
@@ -104,7 +117,7 @@ body {
     margin-left: 25px;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #203e75;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -128,7 +141,7 @@ body {
     margin-bottom: 30px;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #203e75;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -136,7 +149,7 @@ body {
 }
 
 .password-label {
-    color: rgb(59, 3, 138);
+    color: #203e75;
     display: inline-block;
 }
 
@@ -147,8 +160,11 @@ body {
 }
 
 .register-label {
-    color: rgb(0, 106, 255);
+    color: #203e75;
     text-decoration: none;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
 .register-button {
@@ -156,7 +172,7 @@ body {
     margin-top: 25px;
     margin-bottom: 30px;
     border: none;
-    background-color: rgb(59, 3, 138);;
+    background-color: #203e75;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
