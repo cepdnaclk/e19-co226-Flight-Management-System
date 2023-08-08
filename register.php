@@ -126,9 +126,9 @@
     INSERT INTO ticket (uid,fid)
     VALUES ($uid,$fid);
 
+    SELECT * FROM flight WHERE depature = '$departure' AND destination = '$destination';
 
-
-    "SELECT * FROM flight WHERE depature = '$departure' AND destination = '$destination'";
+    SELECT user_id FROM users WHERE email='$username'; 
 
 
     */
