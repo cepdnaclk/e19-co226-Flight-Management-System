@@ -26,6 +26,8 @@
 
 
 <?php
+    $result_count = 0;
+
     if(isset($_GET["search"])){
         $departure = filter_input(INPUT_GET, "depature", FILTER_SANITIZE_SPECIAL_CHARS);
         $destination = filter_input(INPUT_GET, "destination", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -43,6 +45,7 @@
                 $result = mysqli_query($conn, $sql);
 
                 echo '<div class="flight-cart-container">';
+                $result_count = mysqli_num_rows($result);
 
                 if(mysqli_num_rows($result) > 0){
                     while($row = mysqli_fetch_assoc($result)){
@@ -59,47 +62,56 @@
     
                         echo <<<EOL
     
-                        <div class="flight-card">
-                            <div class="flight-information-container">
+                            <div class="flight-card">
+                                <div class="flight-information-container">
 
-                                <div class="container">
-                                    <div class="label">Flight ID</div>
-                                    <div class="id">: {$id}</div>
-                                </div>
-                                <div class="container">
-                                    <div class="label">Arrival Time</div>
-                                    <div class="arrival-time">: {$arrival}</div>
-                                </div>
-                                <div class="container">
-                                    <div class="label">departure Time</div>
-                                    <div class="departure-time">: {$departure}</div>
-                                </div>
-                                <div class="container">
-                                    <div class="label">From</div>
-                                    <div class="from-time">: {$from}</div>
-                                </div>
-                                <div class="container">
-                                    <div class="label">To</div>
-                                    <div class="to">: {$to}</div>
-                                </div>
-                                <div class="container">
-                                    <div class="label">Duration</div>
-                                    <div class="duration">: {$hours} Hours {$minutes} Minutes</div>
-                                </div>
-                                <div class="container">
-                                    <div class="label">Price</div>
-                                    <div class="price">: {$price}.00 LKR</div>
+                                    <div class="container">
+                                        <div class="label">Flight ID</div>
+                                        <div class="id">: {$id}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">Arrival Time</div>
+                                        <div class="arrival-time">: {$arrival}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">departure Time</div>
+                                        <div class="departure-time">: {$departure}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">From</div>
+                                        <div class="from-time">: {$from}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">To</div>
+                                        <div class="to">: {$to}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">Duration</div>
+                                        <div class="duration">: {$hours} Hours {$minutes} Minutes</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">Price</div>
+                                        <div class="price">: {$price}.00 LKR</div>
+                                    </div>
+
                                 </div>
 
-                            </div>
+                            EOL;
 
+                        echo <<<EOL
+                            
                             <div class="buy-button-container">
-                                buy now
+                                <form action="ticketBuy.php" method="post">
+                                    <input type="hidden" value="{$id}" name="flight-id">
+                                    <input type="submit" class="buy-now-button" name="submit" value="BOOK NOW">
+                                </form>
                             </div>
 
                         </div>
     
                         EOL;
+
+                        
     
                     }
 
@@ -115,7 +127,126 @@
                 echo '<script>alert("' . $error . '");</script>';
             }
         }
+
+        
     }
+
+    else{
+        $sql = "SELECT * FROM flight";
+
+            try{
+                $result = mysqli_query($conn, $sql);
+
+                echo '<div class="flight-cart-container">';
+                $result_count = mysqli_num_rows($result);
+
+                if(mysqli_num_rows($result) > 0){
+                    while($row = mysqli_fetch_assoc($result)){
+    
+                        $id = $row['flight_id'];
+                        $departure = $row['departure_time'];
+                        $arrival = $row['arrival_time'];
+                        $from = $row['depature'];
+                        $to = $row['destination'];
+                        $duration = $row['duration'];
+                        $hours = intdiv($duration, 60);
+                        $minutes = $duration % 60;
+                        $price = $row['price'];
+    
+                        echo <<<EOL
+    
+                            <div class="flight-card">
+                                <div class="flight-information-container">
+
+                                    <div class="container">
+                                        <div class="label">Flight ID</div>
+                                        <div class="id">: {$id}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">Arrival Time</div>
+                                        <div class="arrival-time">: {$arrival}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">departure Time</div>
+                                        <div class="departure-time">: {$departure}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">From</div>
+                                        <div class="from-time">: {$from}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">To</div>
+                                        <div class="to">: {$to}</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">Duration</div>
+                                        <div class="duration">: {$hours} Hours {$minutes} Minutes</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="label">Price</div>
+                                        <div class="price">: {$price}.00 LKR</div>
+                                    </div>
+
+                                </div>
+
+                            EOL;
+
+                        echo <<<EOL
+                            
+                            <div class="buy-button-container">
+                                <form action="ticketBuy.php" method="post">
+                                    <input type="hidden" value="{$id}" name="flight-id">
+                                    <input type="submit" class="buy-now-button" name="submit" value="BOOK NOW">
+                                </form>
+                            </div>
+
+                        </div>
+    
+                        EOL;
+
+                        
+    
+                    }
+
+                }
+                else{
+                    echo '<script>alert("No flight available!");</script>';
+                }
+
+                echo "</div>";
+            }
+            catch(mysqli_sql_exception $e){
+                $error =  $e->getMessage();
+                echo '<script>alert("' . $error . '");</script>';
+            }
+    }
+
+    if(isset($_POST["submit"])){
+
+        try{
+            $fid = $_POST["flight-id"];
+            $username = $_SESSION['username'];
+
+            $sql = "SELECT user_id FROM users WHERE email='$username'; ";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+
+            $uid = $row["user_id"];
+
+            $sql = "INSERT INTO ticket (uid,fid) VALUES ($uid,$fid);";
+            mysqli_query($conn, $sql);
+
+            echo '<script>alert("Congratulation!");</script>';
+
+        }
+        catch(mysqli_sql_exception $e){
+            $error =  $e->getMessage();
+            echo '<script>alert("' . $error . '");</script>';
+        }
+
+    }
+
+    
 ?>
 
 </body>

@@ -5,8 +5,11 @@
 
 body {
     background-image: url("../images/bg.jpg");
-    
+    background-color: #80b7df;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .register-card {
@@ -24,6 +27,11 @@ body {
     padding: 30px 50px;
     border-width: 1px;
     background-color: aliceblue;
+}
+
+.img-radius{
+    width: 50%;
+    padding: 20px;
 }
 
 .header-name {
@@ -47,7 +55,7 @@ body {
     margin-bottom: 30px;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #4cb5fe;;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -55,7 +63,7 @@ body {
 }
 
 .username-label {
-    color: rgb(59, 3, 138);
+    color: rgb(0, 0, 0);
     display: inline-block;
 }
 
@@ -76,7 +84,7 @@ body {
     margin-bottom: 30px;
     border-style: solid;
     outline: none;
-    border-color: rgb(59, 3, 138);;
+    border-color: #4cb5fe;;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;
@@ -84,7 +92,7 @@ body {
 }
 
 .password-label {
-    color: rgb(59, 3, 138);
+    color: rgb(0, 0, 0);
     display: inline-block;
 }
 
@@ -95,7 +103,7 @@ body {
 }
 
 .register-label {
-    color: rgb(0, 106, 255);
+    color: rgb(72, 140, 237);
     text-decoration: none;
 }
 
@@ -104,7 +112,7 @@ body {
     margin-top: 25px;
     margin-bottom: 30px;
     border: none;
-    background-color: rgb(59, 3, 138);;
+    background-color: #4cb5fe;;
     padding: 10px 0;
     border-radius: 20px;
     padding-left: 20px;

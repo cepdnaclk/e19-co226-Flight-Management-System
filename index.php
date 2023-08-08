@@ -15,7 +15,7 @@
     
     <form action="index.php" method="post">
         <div class="register-card">
-            <p class="header-name">FlightNav Pro</p>
+            <img src="assests/images/logo.png" class="img-radius" alt="User-Profile-Image">
             <div class="username-container">
                 <p class="username-label">username</p>
                 <p id="username-taken-label"></p>
