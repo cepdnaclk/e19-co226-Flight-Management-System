@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flight-ticket-card {
+    margin-top: 25px;
+    width: 750px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.flight-ticket-header {
+    background-color: rgb(9, 108, 221);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.air-ticket-label {
+    font-display: left;
+    font-size: 28px;
+    padding: 5px 20px 2px 30px;
+}
+
+.boarding-pass-label {
+    flex: 1;
+    text-align: right;
+    padding: 10px 20px 10px 10px;
+}
+
+.flight-ticket-information-container {
+    background-color: rgb(243, 243, 243);
+    padding: 30px 30px 5px 30px;
+}
+
+.information-upper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-container,
+.date-container,
+.boarding-time-container,
+.departure-time-container {
+    display: grid;
+}
+
+.date-container,
+.boarding-time-container,
+.departure-time-container {
+    text-align: center;
+}
+
+.passenger-name-label,
+.date-label,
+.boarding-time-label,
+.departure-time-label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.information-middle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.from-label,
+.to-label,
+.duration-label {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.from-container {
+    display: flex;
+    align-items: center;
+}
+
+.duration-container {
+    text-align: center;
+    margin-right: -55px;
+}
+
+.to-container {
+    display: flex;
+    align-items: center;
+}
+
+.from-label,
+.to-label {
+    width: 40px;
+}
+
+.information-bottom {
+    display: flex;
+    margin-top: 20px;
+    font-size: 11px;
+}
+
+.flight-id-container,
+.ticket-id-container {
+    margin-right: 40px;
+    display: flex;
+}
+
+.flight-id-label,
+.ticket-id-label {
+    font-weight: bold;
+}
+
+.flight-id,
+.ticket-id {
+    padding-left: 10px;
+}
+
+.gate-close-notification {
+    flex: 1;
+    text-align: right;
+    color: rgb(53, 143, 246);
+    font-size: 10px;
+}
+
+.qr-code {
+    height: 50px;
+    padding-right: 25px;
+}
+
+.flight-ticket-footer {
+    background-color: rgb(53, 143, 246);
+    display: flex;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 20px;
+}
+
+.footer-color-ribben {
+    flex: 3;
+}
+
+.company-name-container {
+    flex: 1;
+    background-color: rgb(243, 243, 243);
+    text-align: center;
+    border-bottom-right-radius: 10px;
+}
+
+.company-name {
+    font-size: 10px;
+    padding: 5px;
+    font-weight: bold;
+}

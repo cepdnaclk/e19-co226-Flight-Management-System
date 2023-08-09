@@ -37,6 +37,13 @@ body {
     background-color: rgb(54, 164, 204);
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnSearch:hover {
+    background-color: rgb(22, 127, 165);
+    color: rgb(255, 255, 255);
 }
 
 .inputBoxContainer{
@@ -89,9 +96,9 @@ body {
     border-color: rgb(54, 164, 204);
     border-style: solid;
     color: white;
-    padding: 20px 10px;
+    padding: 15px;
     font-family: 'Lucida Sans';
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
