@@ -37,13 +37,6 @@ body {
     background-color: rgb(54, 164, 204);
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btnSearch:hover {
-    background-color: rgb(22, 127, 165);
-    color: rgb(255, 255, 255);
 }
 
 .inputBoxContainer{
@@ -96,9 +89,9 @@ body {
     border-color: rgb(54, 164, 204);
     border-style: solid;
     color: white;
-    padding: 15px;
+    padding: 20px 10px;
     font-family: 'Lucida Sans';
-    border-radius: 30px;
+    border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
@@ -112,3 +105,61 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.popup-container {
+    width: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    display: grid;
+    justify-content: space-around;
+    text-align: center;
+    padding: 30px 20px;
+    z-index: 1;
+}
+
+.close-button {
+    padding: 10px 20px;
+    margin: 10px 20px;
+    border-style: solid;
+    border-color: rgb(35, 138, 255);
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.close-button:hover {
+    background-color: rgb(35, 138, 255);
+    color: white;
+}
+
+.popup-header {
+    padding: 20px 20px;
+    font-size: 40px;
+}
+
+.popup-message {
+    padding: 20px 60px;
+}
+
+.tick-img {
+    height: 150px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(61, 61, 61, 0.782);
+    visibility: hidden;
+}
+
+.empty-warning::placeholder {
+    color: red;
+}
