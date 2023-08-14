@@ -130,6 +130,8 @@
 
     SELECT user_id FROM users WHERE email='$username'; 
 
+    SELECT SUM(price) FROM (SELECT flight.price FROM flight INNER JOIN ticket ON ticket.fid = flight.flight_id) AS subQuery;
+
 
     */
 
