@@ -24,7 +24,7 @@
           <div class="per">
             <table>
               <tr>
-                <td><span>
+                <td class="amount"><span>
                 <?php
                   $sql = "SELECT SUM(price) FROM (SELECT flight.price FROM flight INNER JOIN ticket ON ticket.fid = flight.flight_id) AS subQuery;";
                   $result = mysqli_query($conn, $sql);
@@ -47,7 +47,7 @@
           <div class="per">
             <table>
               <tr>
-                <td><span>
+                <td class="amount"><span>
                 <?php
                   $sql = "SELECT COUNT(ticket_id) FROM ticket";
                   $result = mysqli_query($conn, $sql);
@@ -70,7 +70,7 @@
           <div class="per">
             <table>
               <tr>
-                <td><span>
+                <td class="amount"><span>
                 <?php
                   $sql = "SELECT COUNT(ticket_id) FROM ticket";
                   $result = mysqli_query($conn, $sql);

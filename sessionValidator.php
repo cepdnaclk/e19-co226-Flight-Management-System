@@ -1,5 +1,6 @@
 <?php
     include("database.php");
+    include("updateFlight.php");
     session_start();
 
     $username = $_SESSION['username'];

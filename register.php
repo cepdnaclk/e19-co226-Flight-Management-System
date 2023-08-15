@@ -132,6 +132,7 @@
 
     SELECT SUM(price) FROM (SELECT flight.price FROM flight INNER JOIN ticket ON ticket.fid = flight.flight_id) AS subQuery;
 
+    DELETE FROM flight WHERE departure_time < NOW();
 
     */
 

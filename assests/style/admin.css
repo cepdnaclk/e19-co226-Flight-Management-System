@@ -32,6 +32,9 @@
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+.amount {
+  padding: 5px;
+}
 .users .card img{
   width: 50px;
   height: 50px;
@@ -49,9 +52,9 @@
   margin:  auto;
 }
 .users .per span{
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 10px;
-  background: rgb(165, 168, 160);
+  background: rgb(255, 255, 255);
 }
 .users td{
   font-size: 14px;
