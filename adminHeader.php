@@ -22,7 +22,7 @@
         </a></li>
         <li><a href="createFlight.php">
           <i class="fas fa-plane"></i>
-          <span class="nav-item" onclick="window.location = 'createFlight.php';">Flight Details</span>
+          <span class="nav-item" onclick="window.location = 'createFlight.php';">Create Flight</span>
         </a></li>
         </li>
         <li><a href="users.php">

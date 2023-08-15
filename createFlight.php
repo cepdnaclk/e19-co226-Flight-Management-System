@@ -46,13 +46,36 @@
             </form>
         </div>
     </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-container" id="popup">
+        <div class="image-container">
+            <img class="tick-img" src="assests/images/tick.png">
+        </div>
+        <div class="popup-header">Successfull!</div>
+        <div class="popup-message">Flight successfully created.</div>
+        <div class="button-container">
+            <button class="close-button" type="button" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+
+        function closePopup(){
+            let popup = document.getElementById('popup');
+            let overlay = document.getElementById('overlay');
+
+            popup.style.visibility = 'hidden';
+            overlay.style.visibility = 'hidden';
+        }
+    </script>
+
+
 </body>
 </html>
 
-<script>
-    var element = document.getElementById("create-flight-button");
-    element.style.fontWeight = "bold";
-</script>
+
 
 <?php
     if(isset($_POST["submit"])){
@@ -87,7 +110,12 @@
 
             try{
                 mysqli_query($conn, $sql);
-                echo '<script>alert("Flight added successfull");</script>';
+                echo <<<EOT
+                    <script>
+                        document.getElementById('popup').style.visibility='visible';
+                        document.getElementById('overlay').style.visibility='visible';
+                    </script>
+                    EOT;
             }
             catch(mysqli_sql_exception $e){
                 $error =  $e->getMessage();
