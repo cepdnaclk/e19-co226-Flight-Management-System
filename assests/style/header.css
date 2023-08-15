@@ -19,10 +19,23 @@ body {
     justify-content: space-between;
 }
 
+.logo-container{
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    object-fit: contain;
+}
+
 .nav-bar-container {
     margin-left: 20px;
     gap: 30px;
     display: flex;
+    align-items: center;
 }
 
 .user-detail-container {
@@ -32,10 +45,26 @@ body {
     
 }
 
+.dashboard-button{
+    padding: 20px 0px;
+}
+
+.ticket-button{
+    padding: 20px 0px;
+}
+
+.user-detail-container{
+    padding: 20px 0px;
+}
+
 .dashboard-button:hover {
     cursor: pointer;
 }
 
 .ticket-button:hover{
+    cursor: pointer;
+}
+
+.logout-button:hover{
     cursor: pointer;
 }

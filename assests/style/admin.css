@@ -1,38 +1,134 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+/* MAin Section */
+.main-content {
+  display: flex;
+  justify-content: flex-end;
+}
+.main{
+  position: relative;
+  padding: 20px;
+  margin-left: 280px;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+.main .users{
+  display: flex;
+  width: 100%;
+}
+.users .card{
+  width: 33%;
+  margin: 10px;
+  background: rgb(226, 246, 255);
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.users .card img{
+  width: 50px;
+  height: 50px;
+  border-radius: 80%;
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+.users .card p{
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.users table{
+  margin:  auto;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(165, 168, 160);
+}
+.users td{
+  font-size: 14px;
+  padding-right: 15px;
+}
+.users .card button{
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #15f900;
+}
+.users .card button:hover{
+  background: #00e7c8;
+  color: rgb(1, 5, 255);
+  transition: 0.5s;
 }
 
-body {
-    margin-top: 70px;
+.attendance{
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+.attendance-list{
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+table thead tr{
+  color: rgb(255, 255, 255);
+  background: #0084ff;
+  text-align: left;
+  font-weight: bold;
+}
+.table th,
+.table td{
+  padding: 12px 15px;
+}
+.table tbody tr{
+  border-bottom: 1px solid #000000;
+}
+.table tbody tr:nth-of-type(odd){
+  background: #ffffff;
+}
+.table tbody tr.active{
+  font-weight: bold;
+  color: #00ddff;
+}
+.table tbody tr:last-of-type{
+  border-bottom: 2px solid #0084ff;
+}
+.table button{
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background:rgb(0, 0, 0);
+  border: 1px solid #010000;
+}
+.table button:hover{
+  background: #070000;
+  color: rgb(0, 0, 0);
+  transition: 0.5rem;
 }
 
-.flight-cart-container {
-    display: grid;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.flight-card {
-    margin-top: 20px;
-    width: 700px;
-    background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 20px 20px;
-    border-radius: 20px;
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    padding: 5px 0px;
-}
-
-.label {
-    width: 150px;
-    font-weight: bold;
-    color: rgb(44, 140, 172);
+.Flights {
+  margin-left: 280px;
+  padding: 20px;
 }

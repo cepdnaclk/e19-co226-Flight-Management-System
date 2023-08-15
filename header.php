@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="assests/style/header.css">
+    <link rel="icon" type="image/x-icon" href="assests/images/fevicon.ico">
 </head>
 <body>
     <div class="header-container">
         <div class="nav-bar-container">
-            <div class="logo-container">LOGO</div>
+            <div class="logo-container"><img src="assests/images/logo2.svg" alt="logo" class="logo"></div>
             <div id="dashboard-button" class="dashboard-button" onclick="window.location = 'dashboard.php';">Dashboard</div>
             <div id="ticket-button" class="ticket-button" onclick="window.location = 'ticketBuy.php';">Tickets</div>
         </div>
