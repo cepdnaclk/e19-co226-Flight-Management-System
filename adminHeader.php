@@ -21,8 +21,13 @@
           <span class="nav-item" onclick="window.location = 'admin.php';">Home</span>
         </a></li>
         <li><a href="createFlight.php">
-          <i class="fas fa-user"></i>
+          <i class="fas fa-plane"></i>
           <span class="nav-item" onclick="window.location = 'createFlight.php';">Flight Details</span>
+        </a></li>
+        </li>
+        <li><a href="users.php">
+          <i class="fas fa-user-friends"></i>
+          <span class="nav-item" onclick="window.location = 'users.php';">User Details</span>
         </a></li>
         </li>
         <li>
