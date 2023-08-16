@@ -3,13 +3,13 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
+repository-name: e19-227-project-template
 title:
 ---
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# Flight Management System
 
 ---
 
@@ -20,13 +20,13 @@ This is a sample image, to show how to add images to your page. To learn more op
  -->
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/19/453, Akash Withanarachchi, [email](mailto:e19453@pdn.ac.lk.com)
+-  E/19/310, Pasindu Rangana, [email](mailto:e19310@pdn.ac.lk.com)
+-  E/19/426, Pubudu Madusith, [email](mailto:e19426@pdn.ac.lk.com)
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Other Sub Topics](#other-sub-topics)
+2. [](#other-sub-topics)
 3. [Links](#links)
 
 ---
