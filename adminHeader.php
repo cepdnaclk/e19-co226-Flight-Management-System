@@ -13,7 +13,7 @@
     <nav>
       <ul>
       <li><a href="#" class="logo">
-          <img src="assests/images/logo2.svg" alt="">
+          <img src="assests/images/single.png" class="logo-image">
           <span class="nav-item">FlightNavPro</span>
         </a></li>
         <li><a href="admin.php">

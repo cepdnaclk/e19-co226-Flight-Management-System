@@ -33,11 +33,11 @@
                     <input class="to-textbox" type="text" name="to">
                 </div>
                 <div class="duration-container">
-                    <div class="duration-label">Duration</div>
+                    <div class="duration-label">Duration (MIN)</div>
                     <input class="duration-textbox" type="text" name="duration">
                 </div>
                 <div class="price-container">
-                    <div class="price-label">Price</div>
+                    <div class="price-label">Price (LKR)</div>
                     <input class="price-textbox" type="text" name="price">
                 </div>
                 <div class="add-button-container">
@@ -99,10 +99,10 @@
             echo '<script>alert("enter destination");</script>';
         }
         elseif(empty($duration)){
-            echo '<script>alert("enter duration");</script>';
+            echo '<script>alert("enter duration (min)");</script>';
         }
         elseif(empty($price)){
-            echo '<script>alert("enter price");</script>';
+            echo '<script>alert("enter price (LKR)");</script>';
         }
         else{
             $sql = "INSERT INTO flight (departure_time, arrival_time, depature, destination, duration, price) 

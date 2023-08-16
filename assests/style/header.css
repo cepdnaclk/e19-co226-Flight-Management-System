@@ -29,6 +29,7 @@ body {
 
 .logo {
     object-fit: contain;
+    height: 25px;
 }
 
 .nav-bar-container {

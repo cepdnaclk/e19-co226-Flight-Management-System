@@ -94,13 +94,25 @@
                 }
             }
 
+            $sql = "SELECT * FROM ticket WHERE uid = '{$uid}'";
+            $result = mysqli_query($conn, $sql);
+
+            $tid_array = array();
+
+            if(mysqli_num_rows($result) > 0){
+                while($row = mysqli_fetch_assoc($result)){
+                    $tid = $row['ticket_id'];
+                    array_push($tid_array, $tid);
+                }
+            }
+
             $length = count($fid_array);
             for ($i = 0; $i < $length; $i++) {
                 $fid = $fid_array[$i];
+                $tid = $tid_array[$i];
 
                 $sql = "SELECT * FROM flight WHERE flight_id = '{$fid}'";
                 $result = mysqli_query($conn, $sql);
-                
                 $row = mysqli_fetch_assoc($result);
 
                         $id = $row['flight_id'];
@@ -197,7 +209,7 @@
                                         </div>
                                     </div>
                                     <div class="qr-code-container">
-                                        <img class="qr-code" id="resultImage" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bahukapn" alt="Result Image">
+                                        <img class="qr-code" id="resultImage" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=F{$fid}-T{$tid}" alt="Result Image">
                                     </div>
                                 </div>
 
@@ -215,7 +227,7 @@
                                             TICKET ID :
                                         </div>
                                         <div class="ticket-id">
-                                            TXX
+                                            T{$tid}
                                         </div>
                                     </div>
                                     <div class="gate-close-notification">

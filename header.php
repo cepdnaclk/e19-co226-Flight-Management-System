@@ -9,7 +9,7 @@
 <body>
     <div class="header-container">
         <div class="nav-bar-container">
-            <div class="logo-container"><img src="assests/images/logo2.svg" alt="logo" class="logo"></div>
+            <div class="logo-container"><img src="assests/images/single.png" alt="logo" class="logo"></div>
             <div id="dashboard-button" class="dashboard-button" onclick="window.location = 'dashboard.php';">Dashboard</div>
             <div id="ticket-button" class="ticket-button" onclick="window.location = 'ticketBuy.php';">Tickets</div>
         </div>
