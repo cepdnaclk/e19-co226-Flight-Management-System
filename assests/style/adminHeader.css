@@ -57,7 +57,7 @@ nav .fas{
   position: relative;
   width: 70px;
   height: 40px;
-  top: 20px;
+  top: 13px;
   font-size: 20px;
   text-align: center;
 }
@@ -70,7 +70,7 @@ a:hover{
   background: rgb(203, 237, 238);
 }
 a:hover i{
-  color: #00fbff;
+  color: #003177;
   transition: 0.5s;
 }
 .logout{
